@@ -1,0 +1,5 @@
+int string update_linkedin_app_download 6
+int drawable ic_launcher 1
+int string update_linkedin_app_cancel 5
+int string update_linkedin_app_message 7
+int string update_linkedin_app_title 8
