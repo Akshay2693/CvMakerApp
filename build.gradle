@@ -20,6 +20,9 @@ allprojects {
         jcenter()
         maven { url 'https://maven.google.com' }
         mavenCentral()
+        maven {
+            url "http://github.com/wada811/Android-Material-Design-Colors/raw/master/repository/"
+        }
     }
 }
 
