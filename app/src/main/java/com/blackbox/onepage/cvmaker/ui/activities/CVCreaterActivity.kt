@@ -16,7 +16,7 @@ import com.badoualy.stepperindicator.StepperIndicator
 import com.blackbox.onepage.cvmaker.R
 import com.blackbox.onepage.cvmaker.db.AppDatabase
 import com.blackbox.onepage.cvmaker.models.BasicInfo
-import com.blackbox.onepage.cvmaker.ui.adapter.EmptyPagerAdapter
+import com.blackbox.onepage.cvmaker.ui.adapter.PagerAdapter
 import com.linkedin.platform.APIHelper
 import com.linkedin.platform.LISessionManager
 import com.linkedin.platform.errors.LIApiError
@@ -185,7 +185,7 @@ class CVCreaterActivity : AppCompatActivity() {
 
             val pager = findViewById(R.id.pager) as ViewPager
             val indicator = findViewById(R.id.stepper_indicator) as StepperIndicator
-            pager.adapter = EmptyPagerAdapter(supportFragmentManager)
+            pager.adapter = PagerAdapter(supportFragmentManager)
 
             indicator.setViewPager(pager, true)
 

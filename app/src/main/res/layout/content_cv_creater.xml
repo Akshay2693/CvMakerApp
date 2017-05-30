@@ -21,6 +21,9 @@
         android:layout_marginRight="16dp"
         android:layout_marginTop="@dimen/margin_10"
         android:layout_marginBottom="@dimen/margin_10"
+        app:stpi_lineColor="@color/colorAccent"
+        app:stpi_stepCount="5"
+        app:stpi_showDoneIcon="true"
         />
 
 </RelativeLayout>
