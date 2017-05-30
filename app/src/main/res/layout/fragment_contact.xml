@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.blackbox.onepage.cvmaker.ui.activities.CVCreaterActivity"
+    tools:showIn="@layout/activity_cv_creater">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/HeaderText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_35"
+            android:text="@string/section_contact" />
+
+        <LinearLayout
+            android:id="@+id/layout_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="true">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/txt_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_phone_receiver"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/colorAccent"
+                    android:hint="@string/hint_phone"
+                    android:imeOptions="actionNext"
+                    android:lines="1" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="true">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/txt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_close_envelope"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/colorAccent"
+                    android:hint="@string/hint_email"
+                    android:imeOptions="actionNext"
+                    android:lines="1" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="true">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/txt_web"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_grid_world"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/colorAccent"
+                    android:hint="@string/hint_website"
+                    android:imeOptions="actionNext"
+                    android:lines="1" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

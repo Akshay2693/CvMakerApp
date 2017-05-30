@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/main_content"
-    tools:context="com.blackbox.onepage.cvmaker.ui.CVCreaterActivity">
+    tools:context="com.blackbox.onepage.cvmaker.ui.activities.CVCreaterActivity">
 
 
     <include layout="@layout/content_cv_creater" />
@@ -15,7 +15,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/margin_55"
+        android:backgroundTint="@color/colorWhite"
+        android:background="@color/colorWhite"
+        app:borderWidth="@dimen/margin_0"
+        app:fabSize="auto"
+        app:srcCompat="@drawable/ic_pantone" />
 
 </android.support.design.widget.CoordinatorLayout>

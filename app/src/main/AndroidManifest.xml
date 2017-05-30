@@ -3,6 +3,7 @@
     package="com.blackbox.onepage.cvmaker">
 
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
 
     <application
         android:name="com.blackbox.onepage.cvmaker.MainApplication"
@@ -12,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.CVCreaterActivity">
+        <activity android:name=".ui.activities.CVCreaterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

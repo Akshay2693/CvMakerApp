@@ -17,7 +17,7 @@ class MainApplication: Application()
 
     }
 
-    public fun getDB(): AppDatabase? {
-        return Room.databaseBuilder(this, AppDatabase::class.java, "user-database").build()
+    fun getDB(): AppDatabase? {
+        return Room.databaseBuilder(applicationContext, AppDatabase::class.java, "user-database").build()
     }
 }
