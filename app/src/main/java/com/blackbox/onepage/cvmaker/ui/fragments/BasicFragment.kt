@@ -13,30 +13,15 @@ import com.blackbox.onepage.cvmaker.R
 import com.blackbox.onepage.cvmaker.db.AppDatabase
 import com.blackbox.onepage.cvmaker.models.BasicInfo
 import com.squareup.picasso.Picasso
-import com.stepstone.stepper.Step
-import com.stepstone.stepper.VerificationError
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
 
 
-class BasicFragment : Fragment(), Step {
+class BasicFragment : Fragment() {
 
     val TAG: String = "BasicFragment"
 
     val threadExecutor: Executor = Executors.newFixedThreadPool(5)
-
-    override fun onSelected() {
-
-    }
-
-    override fun verifyStep(): VerificationError {
-
-        return VerificationError("Click  more times!")
-    }
-
-    override fun onError(p0: VerificationError) {
-
-    }
 
     private var basicInfo: BasicInfo? = null
 

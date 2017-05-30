@@ -7,23 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.blackbox.onepage.cvmaker.R
 import com.blackbox.onepage.cvmaker.models.BasicInfo
-import com.stepstone.stepper.Step
-import com.stepstone.stepper.VerificationError
 
 
-class ContactFragment : Fragment() , Step {
+class ContactFragment : Fragment()  {
 
-    override fun onSelected() {
-
-    }
-
-    override fun verifyStep(): VerificationError {
-        return VerificationError("Click  more times!")
-    }
-
-    override fun onError(p0: VerificationError) {
-
-    }
 
     private var basicInfo: BasicInfo? = null
 

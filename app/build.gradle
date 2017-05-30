@@ -42,6 +42,6 @@ dependencies {
     compile 'com.wada811:android-material-design-colors:3.0.0'
     compile project(':linkedin-sdk')
     compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.stepstone.stepper:material-stepper:3.2.3'
+    compile 'com.github.badoualy:stepper-indicator:1.0.6'
     compile 'com.android.support:support-v4:25.3.1'
 }

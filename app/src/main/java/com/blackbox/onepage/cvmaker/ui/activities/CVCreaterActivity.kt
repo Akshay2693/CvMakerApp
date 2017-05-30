@@ -7,14 +7,16 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.support.design.widget.CoordinatorLayout
 import android.support.design.widget.FloatingActionButton
+import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.util.Base64
 import android.util.Log
 import android.view.View
+import com.badoualy.stepperindicator.StepperIndicator
 import com.blackbox.onepage.cvmaker.R
 import com.blackbox.onepage.cvmaker.db.AppDatabase
 import com.blackbox.onepage.cvmaker.models.BasicInfo
-import com.blackbox.onepage.cvmaker.ui.adapter.MyStepperAdapter
+import com.blackbox.onepage.cvmaker.ui.adapter.EmptyPagerAdapter
 import com.linkedin.platform.APIHelper
 import com.linkedin.platform.LISessionManager
 import com.linkedin.platform.errors.LIApiError
@@ -23,7 +25,6 @@ import com.linkedin.platform.listeners.ApiListener
 import com.linkedin.platform.listeners.ApiResponse
 import com.linkedin.platform.listeners.AuthListener
 import com.linkedin.platform.utils.Scope
-import com.stepstone.stepper.StepperLayout
 import com.thebluealliance.spectrum.SpectrumDialog
 import org.json.JSONObject
 import java.security.MessageDigest
@@ -182,8 +183,18 @@ class CVCreaterActivity : AppCompatActivity() {
 
             dismiss()
 
-            val mStepperLayout = findViewById(R.id.stepperLayout) as StepperLayout
-            mStepperLayout.adapter = MyStepperAdapter(supportFragmentManager, applicationContext)
+            val pager = findViewById(R.id.pager) as ViewPager
+            val indicator = findViewById(R.id.stepper_indicator) as StepperIndicator
+            pager.adapter = EmptyPagerAdapter(supportFragmentManager)
+
+            indicator.setViewPager(pager, true)
+
+            indicator.addOnStepClickListener(StepperIndicator.OnStepClickListener {
+                fun OnStepClicked(step: Int) {
+                    pager.setCurrentItem(step, true);
+                }
+            })
+
 
         } catch (e: Exception) {
             e.printStackTrace()

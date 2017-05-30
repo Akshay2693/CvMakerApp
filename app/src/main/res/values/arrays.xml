@@ -312,4 +312,11 @@
         <item>#ffffff</item>
     </array>
 
+    <string-array name="stepLabels">
+        <item>Approval</item>
+        <item>Processed</item>
+        <item>Shipped</item>
+        <item>Delivery</item>
+    </string-array>
+
 </resources>
