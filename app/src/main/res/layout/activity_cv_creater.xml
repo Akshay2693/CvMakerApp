@@ -23,4 +23,17 @@
         app:fabSize="auto"
         app:srcCompat="@drawable/ic_pantone" />
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="@dimen/margin_110"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:background="@color/colorWhite"
+        android:backgroundTint="@color/colorWhite"
+        app:borderWidth="@dimen/margin_0"
+        app:fabSize="auto"
+        app:srcCompat="@drawable/ic_preview" />
+
 </android.support.design.widget.CoordinatorLayout>

@@ -1,5 +1,7 @@
 package com.blackbox.onepage.cvmaker.ui.activities
 
+import android.Manifest
+import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.arch.persistence.room.Room
 import android.content.Intent
@@ -7,9 +9,9 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.support.design.widget.CoordinatorLayout
 import android.support.design.widget.FloatingActionButton
+import android.support.v4.app.ActivityCompat
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
-import android.util.Base64
 import android.util.Log
 import android.view.View
 import com.badoualy.stepperindicator.StepperIndicator
@@ -17,6 +19,8 @@ import com.blackbox.onepage.cvmaker.R
 import com.blackbox.onepage.cvmaker.db.AppDatabase
 import com.blackbox.onepage.cvmaker.models.BasicInfo
 import com.blackbox.onepage.cvmaker.ui.adapter.PagerAdapter
+import com.blackbox.onepage.cvmaker.utils.Constants
+import com.blackbox.onepage.cvmaker.utils.Preference
 import com.linkedin.platform.APIHelper
 import com.linkedin.platform.LISessionManager
 import com.linkedin.platform.errors.LIApiError
@@ -27,8 +31,6 @@ import com.linkedin.platform.listeners.AuthListener
 import com.linkedin.platform.utils.Scope
 import com.thebluealliance.spectrum.SpectrumDialog
 import org.json.JSONObject
-import java.security.MessageDigest
-import java.security.NoSuchAlgorithmException
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
 
@@ -37,7 +39,6 @@ class CVCreaterActivity : AppCompatActivity() {
 
     val TAG: String = "CVCreaterActivity"
 
-    val PACKAGE = "com.blackbox.onepage.cvmaker"
 
     val threadExecutor: Executor = Executors.newFixedThreadPool(5)
 
@@ -48,6 +49,7 @@ class CVCreaterActivity : AppCompatActivity() {
     private var progressDialog: ProgressDialog? = null
     private var message: String? = null
 
+    var pager: ViewPager? = null
 
     @Synchronized fun show() {
         progressDialog!!.setMessage(message)
@@ -64,36 +66,63 @@ class CVCreaterActivity : AppCompatActivity() {
         progressDialog!!.dismiss()
     }
 
+    @SuppressLint("NewApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cv_creater)
+
+        if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), 2121)
+        }
 
         if (progressDialog == null) {
             progressDialog = ProgressDialog(this)
             message = getString(R.string.message_loading)
         }
 
-        show()
-        generateHashKey()
+        if (!Preference.getBoolean(this, Constants.SP_DATA_DOWNLOADED, false)) {
 
-        val thisActivity = this
+            show()
 
-        LISessionManager.getInstance(applicationContext).init(thisActivity, buildScope(), object : AuthListener {
-            override fun onAuthSuccess() {
-                getProfileInfo()
-            }
+            val thisActivity = this
+            LISessionManager.getInstance(applicationContext).init(thisActivity, buildScope(), object : AuthListener {
+                override fun onAuthSuccess() {
+                    getProfileInfo()
+                }
 
-            override fun onAuthError(error: LIAuthError) {
-                Log.e(TAG, "Error: " + error.toString());
-            }
-        }, true)
+                override fun onAuthError(error: LIAuthError) {
+                    Log.e(TAG, "Error: " + error.toString());
+                    dismiss()
+                }
+            }, true)
+        }else
+        {
+            pager = findViewById(R.id.pager) as ViewPager
+            val indicator = findViewById(R.id.stepper_indicator) as StepperIndicator
+            pager!!.adapter = PagerAdapter(supportFragmentManager)
+
+            indicator.setViewPager(pager, true)
+
+            indicator.addOnStepClickListener(StepperIndicator.OnStepClickListener {
+                fun OnStepClicked(step: Int) {
+                    pager!!.setCurrentItem(step, true);
+                }
+            })
+        }
 
         val background = findViewById(R.id.main_content) as CoordinatorLayout
         val fab = findViewById(R.id.fab) as FloatingActionButton
+        val fabView = findViewById(R.id.fab_view) as FloatingActionButton
 
         fab.setOnClickListener { view ->
             pickColor(background)
         }
+
+        fabView.setOnClickListener { view ->
+            val intent = Intent(this, CVViewerActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     fun saveData(basicInfo: BasicInfo) {
@@ -101,6 +130,7 @@ class CVCreaterActivity : AppCompatActivity() {
             threadExecutor.execute {
                 Log.i(TAG, "Saving Data..");
                 db.userDao().saveUser(basicInfo)
+                Preference.save(this, Constants.SP_DATA_DOWNLOADED, true)
             }
         } catch (e: Exception) {
             e.printStackTrace()
@@ -128,22 +158,7 @@ class CVCreaterActivity : AppCompatActivity() {
         LISessionManager.getInstance(applicationContext).onActivityResult(this, requestCode, resultCode, data)
     }
 
-    fun generateHashKey() {
-        try {
-            val info = packageManager.getPackageInfo(PACKAGE, PackageManager.GET_SIGNATURES)
-            for (signature in info.signatures) {
-                val md = MessageDigest.getInstance("SHA")
-                md.update(signature.toByteArray())
-                Log.i(TAG, Base64.encodeToString(md.digest(), Base64.NO_WRAP));
-            }
-        } catch (e: PackageManager.NameNotFoundException) {
-            Log.d("Name not found", e.message, e)
 
-        } catch (e: NoSuchAlgorithmException) {
-            e.printStackTrace()
-        }
-
-    }
 
     fun getProfileInfo() {
 
@@ -183,22 +198,29 @@ class CVCreaterActivity : AppCompatActivity() {
 
             dismiss()
 
-            val pager = findViewById(R.id.pager) as ViewPager
+            pager = findViewById(R.id.pager) as ViewPager
             val indicator = findViewById(R.id.stepper_indicator) as StepperIndicator
-            pager.adapter = PagerAdapter(supportFragmentManager)
+            pager!!.adapter = PagerAdapter(supportFragmentManager)
 
             indicator.setViewPager(pager, true)
 
             indicator.addOnStepClickListener(StepperIndicator.OnStepClickListener {
                 fun OnStepClicked(step: Int) {
-                    pager.setCurrentItem(step, true);
+                    pager!!.setCurrentItem(step, true);
                 }
             })
-
 
         } catch (e: Exception) {
             e.printStackTrace()
         }
 
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            Log.v(TAG, "Permission: " + permissions[0] + "was " + grantResults[0])
+            //resume tasks needing this permission
+        }
     }
 }
