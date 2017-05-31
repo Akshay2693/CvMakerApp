@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/umair/Desktop/Workspace/Examples Android/Utilities/Android-PdfMyXml-master/lib/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab99f8de5552f27ef8aa62ba876c7d3c/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Projects/CVMaker/lib/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab88cd15ebf68246a26100ca6871dd13/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Projects/CVMaker/lib/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab88cd15ebf68246a26100ca6871dd13/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Workspace/Examples Android/Utilities/Android-PdfMyXml-master/lib/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab99f8de5552f27ef8aa62ba876c7d3c/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    }
+]

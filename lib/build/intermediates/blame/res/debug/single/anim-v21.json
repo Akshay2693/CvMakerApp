@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/umair/Desktop/Projects/CVMaker/lib/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/ffc81316cb1dfae6594efc4b14be5fc0/res/anim-v21/design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Workspace/Examples Android/Utilities/Android-PdfMyXml-master/lib/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/6d2d2dbf6e281edc51f46abddf39e633/res/anim-v21/design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Workspace/Examples Android/Utilities/Android-PdfMyXml-master/lib/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/6d2d2dbf6e281edc51f46abddf39e633/res/anim-v21/design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Projects/CVMaker/lib/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/ffc81316cb1dfae6594efc4b14be5fc0/res/anim-v21/design_bottom_sheet_slide_in.xml"
+    }
+]

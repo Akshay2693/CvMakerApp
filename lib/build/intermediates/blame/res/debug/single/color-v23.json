@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "/Users/umair/Desktop/Projects/CVMaker/lib/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab88cd15ebf68246a26100ca6871dd13/res/color-v23/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Workspace/Examples Android/Utilities/Android-PdfMyXml-master/lib/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab99f8de5552f27ef8aa62ba876c7d3c/res/color-v23/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Workspace/Examples Android/Utilities/Android-PdfMyXml-master/lib/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab99f8de5552f27ef8aa62ba876c7d3c/res/color-v23/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Projects/CVMaker/lib/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab88cd15ebf68246a26100ca6871dd13/res/color-v23/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Workspace/Examples Android/Utilities/Android-PdfMyXml-master/lib/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab99f8de5552f27ef8aa62ba876c7d3c/res/color-v23/abc_tint_default.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Projects/CVMaker/lib/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/ffc81316cb1dfae6594efc4b14be5fc0/res/color-v23/design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Projects/CVMaker/lib/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab88cd15ebf68246a26100ca6871dd13/res/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Projects/CVMaker/lib/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab88cd15ebf68246a26100ca6871dd13/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Projects/CVMaker/lib/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab88cd15ebf68246a26100ca6871dd13/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Projects/CVMaker/lib/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab88cd15ebf68246a26100ca6871dd13/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Workspace/Examples Android/Utilities/Android-PdfMyXml-master/lib/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/6d2d2dbf6e281edc51f46abddf39e633/res/color-v23/design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Workspace/Examples Android/Utilities/Android-PdfMyXml-master/lib/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab99f8de5552f27ef8aa62ba876c7d3c/res/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Workspace/Examples Android/Utilities/Android-PdfMyXml-master/lib/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab99f8de5552f27ef8aa62ba876c7d3c/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Projects/CVMaker/lib/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab88cd15ebf68246a26100ca6871dd13/res/color-v23/abc_tint_default.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Workspace/Examples Android/Utilities/Android-PdfMyXml-master/lib/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab99f8de5552f27ef8aa62ba876c7d3c/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Workspace/Examples Android/Utilities/Android-PdfMyXml-master/lib/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab99f8de5552f27ef8aa62ba876c7d3c/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Workspace/Examples Android/Utilities/Android-PdfMyXml-master/lib/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab99f8de5552f27ef8aa62ba876c7d3c/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Projects/CVMaker/lib/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab88cd15ebf68246a26100ca6871dd13/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Projects/CVMaker/lib/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab88cd15ebf68246a26100ca6871dd13/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Workspace/Examples Android/Utilities/Android-PdfMyXml-master/lib/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab99f8de5552f27ef8aa62ba876c7d3c/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Projects/CVMaker/lib/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab88cd15ebf68246a26100ca6871dd13/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Workspace/Examples Android/Utilities/Android-PdfMyXml-master/lib/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab99f8de5552f27ef8aa62ba876c7d3c/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    }
+]

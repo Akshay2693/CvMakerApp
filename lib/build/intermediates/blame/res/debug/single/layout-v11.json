@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "/Users/umair/Desktop/Workspace/Examples Android/Utilities/Android-PdfMyXml-master/lib/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab99f8de5552f27ef8aa62ba876c7d3c/res/layout-v11/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Workspace/Examples Android/Utilities/Android-PdfMyXml-master/lib/build/intermediates/res/merged/debug/layout-v11/notification_media_cancel_action.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab99f8de5552f27ef8aa62ba876c7d3c/res/layout-v11/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Projects/CVMaker/lib/build/intermediates/res/merged/debug/layout-v11/notification_media_action.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab88cd15ebf68246a26100ca6871dd13/res/layout-v11/notification_media_action.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Projects/CVMaker/lib/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_custom.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab88cd15ebf68246a26100ca6871dd13/res/layout-v11/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Projects/CVMaker/lib/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow_custom.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab88cd15ebf68246a26100ca6871dd13/res/layout-v11/notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Workspace/Examples Android/Utilities/Android-PdfMyXml-master/lib/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow_custom.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab99f8de5552f27ef8aa62ba876c7d3c/res/layout-v11/notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Workspace/Examples Android/Utilities/Android-PdfMyXml-master/lib/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_custom.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab99f8de5552f27ef8aa62ba876c7d3c/res/layout-v11/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Projects/CVMaker/lib/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab88cd15ebf68246a26100ca6871dd13/res/layout-v11/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Workspace/Examples Android/Utilities/Android-PdfMyXml-master/lib/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab99f8de5552f27ef8aa62ba876c7d3c/res/layout-v11/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Projects/CVMaker/lib/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab88cd15ebf68246a26100ca6871dd13/res/layout-v11/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Workspace/Examples Android/Utilities/Android-PdfMyXml-master/lib/build/intermediates/res/merged/debug/layout-v11/notification_media_action.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab99f8de5552f27ef8aa62ba876c7d3c/res/layout-v11/notification_media_action.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Projects/CVMaker/lib/build/intermediates/res/merged/debug/layout-v11/notification_media_cancel_action.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/ab88cd15ebf68246a26100ca6871dd13/res/layout-v11/notification_media_cancel_action.xml"
+    }
+]

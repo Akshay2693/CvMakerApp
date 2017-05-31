@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/umair/Desktop/Workspace/Examples Android/Utilities/Android-PdfMyXml-master/lib/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/6d2d2dbf6e281edc51f46abddf39e633/res/layout-sw600dp-v13/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/Users/umair/Desktop/Projects/CVMaker/lib/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "/Users/umair/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/ffc81316cb1dfae6594efc4b14be5fc0/res/layout-sw600dp-v13/design_layout_snackbar.xml"
+    }
+]
