@@ -9,3 +9,8 @@ This is an ongoing project built for demo purpose to showcase Kotlin for Android
 
 1. Login with LinkedIn
 2. Fetch Profile Info from LinkedIn
+
+# Architecture Components:
+
+1. RxBus
+2. Room Database
