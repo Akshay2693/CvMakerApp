@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.blackbox.onepage.cvmaker.R
 import com.blackbox.onepage.cvmaker.models.EducationInfo
+import kotlinx.android.synthetic.main.item_education.view.*
 
 class EducationListAdapter(val list: List<EducationInfo>, val itemClick: (EducationInfo) -> Unit) :
         RecyclerView.Adapter<EducationListAdapter.ViewHolder>() {
@@ -27,12 +28,9 @@ class EducationListAdapter(val list: List<EducationInfo>, val itemClick: (Educat
     class ViewHolder(view: View, val itemClick: (EducationInfo) -> Unit) : RecyclerView.ViewHolder(view) {
 
         fun bindInfo(info: EducationInfo) {
+
             with(info) {
-                //Picasso.with(itemView.context).load(iconUrl).into(itemView.icon)
-                /*itemView.date.text = date.toDateString()
-                itemView.description.text = description
-                itemView.maxTemperature.text = "${high}º"
-                itemView.minTemperature.text = "${low}º"*/
+                itemView.txt_institute.text = info.institute
                 itemView.setOnClickListener { itemClick(this) }
             }
         }

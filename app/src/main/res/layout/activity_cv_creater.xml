@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_marginBottom="@dimen/margin_110"
+        android:layout_marginBottom="@dimen/margin_135"
         android:layout_marginRight="@dimen/fab_margin"
         android:background="@color/colorWhite"
         android:backgroundTint="@color/colorWhite"

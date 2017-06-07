@@ -24,6 +24,12 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list_education"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible" />
+
             <LinearLayout
                 android:id="@+id/btn_add"
                 android:layout_width="@dimen/margin_160"
@@ -54,11 +60,6 @@
                     android:layout_gravity="center_horizontal"/>
             </LinearLayout>
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/list_education"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:visibility="gone" />
         </LinearLayout>
 
     </LinearLayout>

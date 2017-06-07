@@ -18,7 +18,7 @@ interface BasicInfoDao
     fun insertAll(vararg basicInfos: BasicInfo)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun saveUser(basicInfo: BasicInfo)
+    fun save(basicInfo: BasicInfo)
 
     @Delete
     fun delete(basicInfo: BasicInfo)

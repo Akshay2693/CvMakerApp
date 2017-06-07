@@ -1,7 +1,6 @@
 package com.blackbox.onepage.cvmaker.ui.fragments
 
 import android.app.Activity.RESULT_OK
-import android.arch.persistence.room.Room
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.os.Bundle
@@ -44,9 +43,9 @@ class BasicFragment : Fragment() {
         try {
             threadExecutor.execute {
                 Log.i(TAG, "Fetching Data..");
-                val db: AppDatabase = Room.databaseBuilder(activity, AppDatabase::class.java, "user-database").build()
+                //val db: AppDatabase = Room.databaseBuilder(activity, AppDatabase::class.java, "user-database").build()
 
-                val list: List<BasicInfo> = db.userDao().getAll()
+                val list: List<BasicInfo> = AppDatabase.getInstance(activity)?.userDao()?.getAll()!!
                 if (list.isNotEmpty()) {
                     basicInfo = list[0]
                 }

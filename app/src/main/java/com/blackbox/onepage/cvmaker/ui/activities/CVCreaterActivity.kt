@@ -43,8 +43,6 @@ class CVCreaterActivity : AppCompatActivity() {
 
     val threadExecutor: Executor = Executors.newFixedThreadPool(5)
 
-    val db: AppDatabase = Room.databaseBuilder(this, AppDatabase::class.java, "user-database").build()
-
     var url: String = "https://api.linkedin.com/v1/people/~:(id,first-name,last-name,headline,picture-url,industry,summary,specialties,positions:(id,title,summary,start-date,end-date,is-current,company:(id,name,type,size,industry,ticker)),educations:(id,school-name,field-of-study,start-date,end-date,degree,activities,notes),associations,interests,num-recommenders,date-of-birth,publications:(id,title,publisher:(name),authors:(id,name),date,url,summary),patents:(id,title,summary,number,status:(id,name),office:(name),inventors:(id,name),date,url),languages:(id,language:(name),proficiency:(level,name)),skills:(id,skill:(name)),certifications:(id,name,authority:(name),number,start-date,end-date),courses:(id,name,number),recommendations-received:(id,recommendation-type,recommendation-text,recommender),honors-awards,three-current-positions,three-past-positions,volunteer)?format=json"
 
     private var progressDialog: ProgressDialog? = null
@@ -69,11 +67,19 @@ class CVCreaterActivity : AppCompatActivity() {
 
     private var _rxBus: RxBus? = null
 
-    //     This is better done with a DI Library like Dagger
     val rxBusSingleton: RxBus
         get() {
             val res = _rxBus ?: RxBus()
             if (_rxBus == null) _rxBus = res
+            return res;
+        }
+
+    private var _db: AppDatabase? = null
+
+    val dbSingleton: AppDatabase
+        get() {
+            val res = _db ?: Room.databaseBuilder(applicationContext, AppDatabase::class.java, "user-database").build()
+            if (_db == null) _db = res
             return res;
         }
 
@@ -143,7 +149,7 @@ class CVCreaterActivity : AppCompatActivity() {
         try {
             threadExecutor.execute {
                 Log.i(TAG, "Saving Data..");
-                db.userDao().saveUser(basicInfo)
+                AppDatabase.getInstance(applicationContext)?.userDao()?.save(basicInfo)
                 Preference.save(this, Constants.SP_DATA_DOWNLOADED, true)
             }
         } catch (e: Exception) {

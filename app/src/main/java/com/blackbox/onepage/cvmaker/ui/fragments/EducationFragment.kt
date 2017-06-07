@@ -1,6 +1,5 @@
 package com.blackbox.onepage.cvmaker.ui.fragments
 
-import android.arch.persistence.room.Room
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -34,9 +33,8 @@ class EducationFragment : Fragment() {
 
     val threadExecutor: Executor = Executors.newFixedThreadPool(5)
 
-    val db: AppDatabase = Room.databaseBuilder(activity, AppDatabase::class.java, "user-database").build()
 
-
+    private var adapter: EducationListAdapter? = null
     private var basicInfo: BasicInfo? = null
     private var infoList: List<EducationInfo>? = null
 
@@ -59,28 +57,10 @@ class EducationFragment : Fragment() {
         }
 
         newsList = view.findViewById(R.id.list_education) as RecyclerView?
-        newsList?.setHasFixedSize(true) // use this setting to improve performance
+        newsList?.setHasFixedSize(true)
         newsList?.layoutManager = LinearLayoutManager(context)
 
-
-        try {
-            threadExecutor.execute {
-                Log.i(TAG, "Fetching Data..");
-                val db: AppDatabase = Room.databaseBuilder(activity, AppDatabase::class.java, "user-database").build()
-
-                val list: List<EducationInfo> = db.educationDao().getAll()
-                if (list.isNotEmpty()) {
-                    infoList = list
-                }
-            }
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-
-        val adapter = EducationListAdapter(infoList!!) {
-
-        }
-        newsList?.adapter = adapter
+        fetchData()
 
         return view
     }
@@ -123,6 +103,21 @@ class EducationFragment : Fragment() {
                             val info: EducationInfo = event as EducationInfo
                             Log.i(TAG, "Info: " + info.institute)
                             saveData(info)
+
+                            threadExecutor.execute {
+                                Log.i(TAG, "Fetching Data..");
+
+                                val list: List<EducationInfo> = AppDatabase.getInstance(activity)?.educationDao()?.getAll()!!
+
+                                for (item in list) {
+                                    Log.i(TAG, "Institute: " + item.institute);
+                                }
+
+                                if (list.isNotEmpty()) {
+                                    infoList = list
+                                }
+                            }
+                            adapter?.notifyDataSetChanged()
                         })
     }
 
@@ -130,8 +125,33 @@ class EducationFragment : Fragment() {
         try {
             threadExecutor.execute {
                 Log.i(TAG, "Saving Data..");
-                db.educationDao().saveUser(basicInfo)
+                AppDatabase.getInstance(activity)?.educationDao()?.save(basicInfo)
 
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    fun fetchData() {
+        try {
+            threadExecutor.execute {
+                Log.i(TAG, "Fetching Data..");
+
+                val list: List<EducationInfo> = AppDatabase.getInstance(activity)?.educationDao()?.getAll()!!
+
+                for (item in list) {
+                    Log.i(TAG, "Institute: " + item.institute);
+                }
+
+                if (list.isNotEmpty()) {
+                    infoList = list
+                    adapter = EducationListAdapter(infoList!!) {
+
+                    }
+                    newsList?.adapter = adapter
+
+                }
             }
         } catch (e: Exception) {
             e.printStackTrace()

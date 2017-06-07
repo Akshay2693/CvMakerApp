@@ -12,7 +12,7 @@ import android.os.Parcelable
  */
 @Entity(tableName = "education")
 class EducationInfo(
-        @ColumnInfo(name = "id") @PrimaryKey var id: String? = "",
+        @ColumnInfo(name = "id") @PrimaryKey(autoGenerate = true) var id: Int? = 0,
         @ColumnInfo(name = "institute") var institute: String? = "",
         @ColumnInfo(name = "start_year") var startYear: String? = "",
         @ColumnInfo(name = "end_year") var endYear: String? = "",
@@ -26,7 +26,7 @@ class EducationInfo(
     }
 
     constructor(source: Parcel) : this(
-            source.readString(),
+            source.readInt(),
             source.readString(),
             source.readString(),
             source.readString(),
@@ -36,7 +36,7 @@ class EducationInfo(
     override fun describeContents() = 0
 
     override fun writeToParcel(dest: Parcel, flags: Int) {
-        dest.writeString(id)
+        dest.writeInt(id!!)
         dest.writeString(institute)
         dest.writeString(startYear)
         dest.writeString(endYear)
