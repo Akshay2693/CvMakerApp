@@ -8,7 +8,8 @@ import com.blackbox.onepage.cvmaker.models.BasicInfo
 /**
  * Created by umair on 26/05/2017.
  */
-@Database(entities = arrayOf(BasicInfo::class), version = 3)
+@Database(entities = arrayOf(BasicInfo::class), version = 4)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun userDao(): BasicInfoDao
+    abstract fun educationDao(): EducationDao
 }

@@ -70,4 +70,6 @@
     <integer name="anim_duration_long">500</integer>
     <integer name="anim_duration_medium">300</integer>
 
+    <dimen name="grid_expected_size">120dp</dimen>
+
 </resources>

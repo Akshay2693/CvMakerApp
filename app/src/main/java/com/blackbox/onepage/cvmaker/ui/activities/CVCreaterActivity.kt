@@ -18,6 +18,7 @@ import com.badoualy.stepperindicator.StepperIndicator
 import com.blackbox.onepage.cvmaker.R
 import com.blackbox.onepage.cvmaker.db.AppDatabase
 import com.blackbox.onepage.cvmaker.models.BasicInfo
+import com.blackbox.onepage.cvmaker.rxBus.RxBus
 import com.blackbox.onepage.cvmaker.ui.adapter.PagerAdapter
 import com.blackbox.onepage.cvmaker.utils.Constants
 import com.blackbox.onepage.cvmaker.utils.Preference
@@ -66,6 +67,16 @@ class CVCreaterActivity : AppCompatActivity() {
         progressDialog!!.dismiss()
     }
 
+    private var _rxBus: RxBus? = null
+
+    //     This is better done with a DI Library like Dagger
+    val rxBusSingleton: RxBus
+        get() {
+            val res = _rxBus ?: RxBus()
+            if (_rxBus == null) _rxBus = res
+            return res;
+        }
+
     @SuppressLint("NewApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -73,6 +84,10 @@ class CVCreaterActivity : AppCompatActivity() {
 
         if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), 2121)
+        }
+
+        if (checkSelfPermission(android.Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE), 2122)
         }
 
         if (progressDialog == null) {
@@ -95,8 +110,7 @@ class CVCreaterActivity : AppCompatActivity() {
                     dismiss()
                 }
             }, true)
-        }else
-        {
+        } else {
             pager = findViewById(R.id.pager) as ViewPager
             val indicator = findViewById(R.id.stepper_indicator) as StepperIndicator
             pager!!.adapter = PagerAdapter(supportFragmentManager)
@@ -157,7 +171,6 @@ class CVCreaterActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
         LISessionManager.getInstance(applicationContext).onActivityResult(this, requestCode, resultCode, data)
     }
-
 
 
     fun getProfileInfo() {

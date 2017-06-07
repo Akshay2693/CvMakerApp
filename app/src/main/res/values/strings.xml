@@ -22,4 +22,17 @@
 
 
     <string name="message_loading">Loading your LinkedIn Profile, Please Wait..</string>
+
+    <!--Education Dialog-->
+    <string name="txt_education">Education</string>
+    <string name="txt_cancel">Cancel</string>
+    <string name="txt_done">Done</string>
+    <string name="txt_add">Add</string>
+    <string name="txt_institute">Institution</string>
+    <string name="hint_institute">Enter Institution Name</string>
+    <string name="hint_year">XXXX</string>
+    <string name="txt_year">Enter Year</string>
+    <string name="txt_degree">Degree</string>
+    <string name="hint_degree">Enter Degree Title</string>
+
 </resources>

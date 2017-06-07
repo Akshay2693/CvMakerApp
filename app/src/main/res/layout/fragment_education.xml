@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.blackbox.onepage.cvmaker.ui.activities.CVCreaterActivity"
-    tools:showIn="@layout/activity_cv_creater">
+    tools:context="com.blackbox.onepage.cvmaker.ui.activities.CVCreaterActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,6 +24,41 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <LinearLayout
+                android:id="@+id/btn_add"
+                android:layout_width="@dimen/margin_160"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/margin_10"
+                android:background="@drawable/bg_chat_box_input"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:elevation="@dimen/margin_4"
+                android:padding="@dimen/margin_4">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="@dimen/margin_45"
+                    android:layout_height="@dimen/margin_45"
+                    app:srcCompat="@drawable/ic_plus"/>
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_15"
+                    android:text="@string/txt_add"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/txt_size_18"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list_education"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
         </LinearLayout>
 
     </LinearLayout>
